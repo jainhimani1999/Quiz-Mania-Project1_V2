@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +10,33 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'QuizMania_V2/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'QuizMania_V2/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
   <!-- Bootstrap css -->
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'QUizMania_V2/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 
   <!-- Libraries CSS Files -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/lib/owlcarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/lib/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{% static 'QuizMania_V2/css/style.css' %}" rel="stylesheet">
   
   <style>
     
@@ -205,7 +215,7 @@
       
         <div class="col-md-6">
           <div class="container">
-            <img src="img/giphy.gif" alt="img" class="image center">
+            <img src="{% static 'QuizMania_V2/img/giphy.gif' %}" alt="img" class="image center">
             <a href="#get1" onclick="myFunction()"><div class="overlay">
               <div class="text">Add New Category Quiz</div>
             </div>
@@ -216,7 +226,7 @@
       
         <div class="col-md-6">
           <div class="container">
-            <img src="img/giphy.gif" alt="img" class="image center">
+            <img src="{% static 'QuizMania_V2/img/giphy.gif' %}" alt="img" class="image center">
             <a href="#get1" onclick="myFunction()"><div class="overlay">
               <div class="text">Add Existing Category Quiz</div>
             </div>
@@ -277,20 +287,20 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
+  <script src="{% static 'QuizMania_V2/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/bootstrap/js/bootstrap.bundle.min.js' %"></script>
+  <script src="{% static 'QuizMania_V2/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/modal-video/js/modal-video.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'QuizMania_V2/lib/wow/wow.min.js' %}"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'QuizMania_V2/contactform/contactform.js' %}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{% static 'QuizMania_V2/js/main.js' %}"></script>
 
 </body>
 </html>

@@ -4,3 +4,6 @@ from django.shortcuts import render
 def index(request):
     return render(request,"QuizMania_V2/index.html")
 
+def admin_V(request):
+    return render(request,"QuizMania_V2/admin.html")
+

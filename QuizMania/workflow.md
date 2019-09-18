@@ -20,4 +20,4 @@ Date: 16th
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 ```
 * changes all the ```src``` paths with ```jinja``` and just added ```{% static 'QuizMania_V2/``` to all the ```source paths```
-
+* ```admin.html``` in working condition

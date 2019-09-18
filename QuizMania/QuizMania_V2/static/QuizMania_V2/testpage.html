@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Title Page -->
+	<title>Welcome to the Quiz</title>
+
+	<!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Required CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+<!-- Custom CSS -->
+	<style type="text/css">
+		.ui.main.container {
+			margin-top: 4em;
+      
+
+		}
+		.ui.card {width: 100%;border-radius: 0;
+    }
+	</style>
+		<style type="text/css">
+	.card-list-soal .ui.button { margin-bottom: 10px;  }
+	.card-list-soal {
+		position: fixed;
+		top: 8%;
+		height: auto;
+		right: 0;
+		max-width: 260px;
+		background: white;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		overflow-y:hidden;
+    color:cornflowerblue !important;
+	}
+	.card-list-soal .soal {
+		padding-top: 10px;
+		height: auto;
+		max-height: 50vh;
+		overflow-y: scroll;
+    
+	}
+	.button-list-soal {
+		position: fixed;
+		top: 30%;
+		right: 0;
+		padding: 50px;
+		background:cornflowerblue;
+		color: white;
+		text-align: right;
+		cursor: pointer;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		font-size: 0.9em;
+    
+	}
+	.ui.label { border-radius: 0; }
+	.ui.form.opsi { margin-top: 20px; }
+	.opsi { margin-bottom: 15px;position: relative; }
+	.opsi input[type="radio"] {
+	    display:none;
+	}
+	.opsi label.abjad {
+		font-size: 0.8em;
+	    display: inline-block;
+	    border: 1px solid #2185d0;
+	    border-radius: 50%;
+		height: auto;
+	    padding: 3px 8px;
+		float: left;
+		margin-right: 10px;
+    
+	}
+	.opsi label.abjad:hover { background: #2185d0;cursor: pointer; }
+	.opsi label.abjad:hover + .opsi { background: #2185d0;cursor: pointer; }
+	.opsi input[type="radio"]:checked + label.abjad {
+		background:#2185d0 !important;
+		color:#2185d0 !important;
+	}
+	.opsi label.isi {
+		display: block;
+		width: 90%;
+		margin-left: 35px;
+    
+    font-size: 15px;
+    
+	}
+      .description{
+		padding-left: 30px;
+        
+	}
+    .header{
+
+        
+        padding-top:11px !important;
+      }
+      
+      .nav-soal{
+        padding-bottom:17px !important
+      }
+      #header {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 48px;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+
+#header #logo {
+  padding: 6px 0 0 0;
+}
+
+#header #logo h1 {
+  color: #505050;
+  font-family: "Philosopher", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#header #logo h1 a {
+  color: #555;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#header #logo h1 a span {
+  color: #71c55d;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-header {
+  background: #fff;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+				
+			
+	</style>
+	<script type="text/javascript">
+                function accessCookie(cookieName)
+                {
+                var name = cookieName + "=";
+                var allCookieArray = document.cookie.split(';');
+                for(var i=0; i<allCookieArray.length; i++)
+                {
+                        var temp = allCookieArray[i].trim();
+                        if (temp.indexOf(name)==0)
+                        return temp.substring(name.length,temp.length);
+                        }
+                        return "";
+                }
+                function checkCookie()
+                {
+                var user = accessCookie("User_Id");
+                if (user=="")
+                window.location="/login-register";
+                }
+        </script>	
+</head>
+<body onload="checkCookie()">
+	<!-- Page Header -->
+	
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span>Quiz</span>Mania</a></h1>
+      </div>
+      <div id="logo" class="pull-right">
+        <h1>Hi There</h1>    
+      </div>
+
+    </div>
+  </header>
+
+		
+	<br>
+	<br>
+	<br>
+	<!-- Page Content -->
+	<div style="text-align:center">
+		<h2><p id="timer" style=" text-align: center; font-size: 20px;"></p></h2>
+	</div>
+		<div class="ui active dimmer page" style="z-index: 103;">
+		<div class="ui text loader" style="margin-top: 250px;">Loading</div>
+	</div>
+	<div class="ui main container">
+		<form class="ui form opsi" action="www.google.com">
+		<div class="ui card">
+			<div class="content"  style="background: #71c55d">
+				<div class="ui header" style="font-size:15px;">
+				<p style="color:white; font-size: 15px"><b>Questions : </b><span data-position="bottom right" data-tooltip="Nomor Soal Saat Ini" class="ui blue label">1</span></p>
+
+					
+
+
+					</div>
+				</div>
+
+				</div>
+
+				<div class="ui divider"></div>
+			
+				<div class="description" padding-left=30;>
+					<h4><p >Which technology is used for automation?</p></h4>
+					
+
+						<div class="opsi">
+							<input type="radio" name="opsi" class="opsi" id="a">
+							<label class="abjad" for="a">A</label>
+							<label class="isi">Ansible</label>
+						</div>
+
+						<div class="opsi">
+							<input type="radio" name="opsi" class="opsi" id="b">
+							<label class="abjad" for="b">B</label>
+							<label class="isi">Docker</label>
+						</div>
+
+						<div class="opsi">
+							<input type="radio" name="opsi" class="opsi" id="c">
+							<label class="abjad" for="c">C</label>
+							<label class="isi">Devops</label>
+						</div>
+
+						<div class="opsi">
+							<input type="radio" name="opsi" class="opsi" id="d">
+							<label class="abjad" for="d">D</label>
+							<label class="isi">Linux</label>
+						</div>
+						</div>
+						
+					
+
+					
+					</div>
+					
+					<div class="nav-soal center aligned">
+						<center>
+						<button class="btn btn-primary " type="submit" >
+              Next
+              <i class="chevron right icon" ></i>
+            </button>
+            <button class="btn btn-success " type="submit" >
+						  
+						  Submit
+						</button>
+						</center>
+						
+					</div>
+
+				
+			
+			</form>
+		</div>
+	</div>
+
+
+	<!-- Page Footer -->
+
+	<!-- Required JavaScript -->
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	
+	<!-- Custom JavaScript -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.ui.dropdown').dropdown();
+		$('.message .close').on('click', function() {
+		    $(this).closest('.message').transition('fade');
+		});
+	});
+	</script>
+		<script type="text/javascript">
+	$(document).ready(function(){
+		$('.ui.dimmer.page').removeClass('active');
+
+		var intervalAnim = 700;
+		$('#close-list-soal').click(function(){
+			$('.card-list-soal').fadeOut(intervalAnim);
+			$('.button-list-soal').fadeIn(intervalAnim);
+		});	
+		$('.button-list-soal').click(function(){
+			$('.card-list-soal').fadeIn(intervalAnim);
+			$('.button-list-soal').fadeOut(intervalAnim);
+		});
+
+		$('#btn-ragu').click(function(){
+			if ( $('#checkbox-ragu').attr('checked') ) {
+				$('#checkbox-ragu').removeAttr('checked');
+			} else {
+				$('#checkbox-ragu').attr('checked', '');
+			}
+		});
+
+		$(window).scroll(function() {
+		  if( $(document).scrollTop() > $('.navbar').height() ) {
+		    $('#waktu-nav').css({'display':'flex'});
+		  } else {
+				$('#waktu-nav').css({'display':'none'});
+		  }
+		});
+
+	});
+  </script>
+  <!--Timer-->
+  <script type="text/javascript">
+		alert("Click OK to BEGIN!!!");
+		document.getElementById('timer').innerHTML =
+  30 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){document.getElementById("sub").click();}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+		</script>
+</body>
+</html>
+

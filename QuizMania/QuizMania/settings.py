@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login_register.apps.LoginRegisterConfig',
+    'TestTime.apps.TestTimeConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'QuizMania.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["QuizMania_V2/templates","login_register/templates1"],
+        'DIRS': ["QuizMania_V2/templates","login_register/templates1",'TestTime/templates2'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

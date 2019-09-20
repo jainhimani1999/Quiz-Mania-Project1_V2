@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +11,13 @@
 
 	<!-- Required CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/style.css" rel="stylesheet">
+	<link href="{% static 'QuizMania_V2/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'QuizMania_V2/css/style.css' %}" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="./css/custom_style.css" rel="stylesheet">
+	<link href="{% static 'QuizMania_V2/css/custom_style.css' %}" rel="stylesheet">
 
 
 	<script type="text/javascript">
@@ -37,7 +37,7 @@
                 {
                 var user = accessCookie("User_Id");
                 if (user=="")
-                window.location="/login-register";
+                window.location="/login_reg";
                 }
         </script>	
 </head>
@@ -105,7 +105,7 @@
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="img/docker.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
 											
 											<h4>Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
@@ -122,7 +122,7 @@
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
 											<div class="feature-block" >
-												<img src="img/AWS.jpg" alt="img" class="img-fluid">
+												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
 												
 												<h4>EC-2</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -134,7 +134,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/redhat.jpg" height="90" width="85">
+											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
 					
 											<h4>Redhat</h4>
 					
@@ -144,7 +144,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/python.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Python</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -152,7 +152,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/tensorflow.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Tensorflow</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -160,7 +160,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/computer_vision.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Computer Vision</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -168,7 +168,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/kubernetes.png" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
 											<h4>Kubernetes</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -176,7 +176,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/svg/code.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
 											<h4>Scikit learn</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -200,7 +200,7 @@
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="img/docker.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
 											
 											<h4>Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
@@ -217,7 +217,7 @@
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
 											<div class="feature-block" >
-												<img src="img/AWS.jpg" alt="img" class="img-fluid">
+												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
 												
 												<h4>EC-2</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -229,7 +229,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/redhat.jpg" height="90" width="85">
+											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
 					
 											<h4>Redhat</h4>
 					
@@ -239,7 +239,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/python.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Python</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -247,7 +247,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/tensorflow.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Tensorflow</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -255,7 +255,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/computer_vision.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Computer Vision</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -263,7 +263,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/kubernetes.png" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
 											<h4>Kubernetes</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -271,7 +271,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/svg/code.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
 											<h4>Scikit learn</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -295,7 +295,7 @@
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
 										<div class="feature-block" >
-											<img src="img/docker.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/docker.svg' %}" alt="img" class="img-fluid">
 											
 											<h4>Demo</h4>
 											<p>This is the demo test, This page will explain whats going on</p>
@@ -312,7 +312,7 @@
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
 											<div class="feature-block" >
-												<img src="img/AWS.jpg" alt="img" class="img-fluid">
+												<img src="{% static 'QuizMania_V2/img/AWS.jpg' %}" alt="img" class="img-fluid">
 												
 												<h4>EC-2</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -324,7 +324,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/redhat.jpg" height="90" width="85">
+											<img src="{% static 'QuizMania_V2/img/redhat.jpg' %}" height="90" width="85">
 					
 											<h4>Redhat</h4>
 					
@@ -334,7 +334,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/python.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/python.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Python</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -342,7 +342,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/tensorflow.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/tensorflow.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Tensorflow</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -350,7 +350,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/computer_vision.jpeg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/computer_vision.jpeg' %}" alt="img" class="img-fluid">
 											<h4>Computer Vision</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -358,7 +358,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/kubernetes.png" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/kubernetes.png' %}" alt="img" class="img-fluid">
 											<h4>Kubernetes</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>
@@ -366,7 +366,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 										<div class="feature-block">
-											<img src="img/svg/code.svg" alt="img" class="img-fluid">
+											<img src="{% static 'QuizMania_V2/img/svg/code.svg' %}" alt="img" class="img-fluid">
 											<h4>Scikit learn</h4>
 											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 										</div>

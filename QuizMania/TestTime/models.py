@@ -15,8 +15,8 @@ class testInfo(models.Model):
     
 class userScore(models.Model):
     score = models.IntegerField(null=False)
-    user_id = models.ForeignKey(userInfo,on_delete=models.CASCADE,related_name="")
-    test_id = models.ForeignKey(testInfo,on_delete=models.CASCADE,related_name="")
+    user_id = models.ForeignKey(userInfo,on_delete=models.CASCADE,related_name="UserId")
+    test_id = models.ForeignKey(testInfo,on_delete=models.CASCADE,related_name="TestId")
 
     def __str__(self):
         return f"You Scored: {score}"

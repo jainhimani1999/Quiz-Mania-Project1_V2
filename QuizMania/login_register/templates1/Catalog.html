@@ -1,5 +1,4 @@
 {% load static %}
-{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +33,12 @@
                         }
                         return "";
                 }
+				//var csrftoken = accessCookie('csrftoken');
                 function checkCookie()
                 {
                 var user = accessCookie("Email");
                 if (user=="")
-                window.location="/login_reg";
+                window.location="/logout"; // if cookies are not found send the user to login page
                 }
 		</script>	
 
@@ -52,9 +52,9 @@
       <div id="logo" class="pull-left">
         <h1><a href="#body" class="scrollto"><span>Quiz</span>Mania</a></h1>
       </div>
-      <div id="logo" class="pull-right">
-        <button  class="btn btn-primary" type="button" id="login" onclick="checkCookie()" ><a href="\logout">Logout</a></button>
-      </div>
+      <div id="logo" class="pull-right">							<!-- after logout, delete the cookies-->
+        <button  class="btn btn-primary" type="button" id="login" onclick="checkCookie()" ><a href="/logout">Logout</a></button>
+      </div>								<!-- need to change the css for log out button-->
 			
 		</div>
 		
@@ -103,6 +103,7 @@
 									
 								 <div class="col-md-6 col-lg-3">
 										<form action="/cgi-bin/testpage" method="post">
+											{% csrf_token %}
 											<input type="hidden" class ="userID" name="userid" value="">
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
@@ -120,6 +121,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 											<form action="/cgi-bin/testpage" method="post">
+												{% csrf_token %}
 												<input type="hidden" class ="userID" name="userid" value="">
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
@@ -198,6 +200,7 @@
 									
 								 <div class="col-md-6 col-lg-3">
 										<form action="/cgi-bin/testpage" method="post">
+											{% csrf_token %}
 											<input type="hidden" class ="userID" name="userid" value="">
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
@@ -215,6 +218,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 											<form action="/cgi-bin/testpage" method="post">
+												{% csrf_token %}
 												<input type="hidden" class ="userID" name="userid" value="">
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">
@@ -293,6 +297,7 @@
 									
 								 <div class="col-md-6 col-lg-3">
 										<form action="/cgi-bin/testpage" method="post">
+											{% csrf_token %}
 											<input type="hidden" class ="userID" name="userid" value="">
 											<input type="hidden" name="testid" value="1">
 											<button type="submit" style="background-color: transparent; color: white; border: none">
@@ -310,6 +315,7 @@
 					
 									<div class="col-md-6 col-lg-3">
 											<form action="/cgi-bin/testpage" method="post">
+												{% csrf_token %}
 												<input type="hidden" class ="userID" name="userid" value="">
 												<input type="hidden" name="testid" value="2">
 												<button type="submit" style="background-color: transparent; color: white; border: none">

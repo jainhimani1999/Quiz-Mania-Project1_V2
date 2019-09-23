@@ -1,11 +1,11 @@
-{% load static %}
+{% load static %} <!-- added to insert css,bootstrap,js called jinja-->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>QuizMania</title>
-	<link rel="stylesheet" href="{% static 'auth.css' %}">
+	<link rel="stylesheet" href="{% static 'auth.css' %}">  <!-- format to insert the path of css file-->
 	<script type="text/javascript">
     		function accessCookie(cookieName)
   		{
@@ -19,6 +19,7 @@
     			}
     			return "";
   		}
+		  //var csrftoken = Cookies.get('csrftoken'); // added for csrf protection trying to learn its use
     		function checkCookie()
   		{
   		var user = accessCookie("User_Id");
@@ -37,7 +38,7 @@
 			<div class="lowin-box lowin-login">
 				<div class="lowin-box-inner">
 					<form action="/login_check" method="post">
-						{% csrf_token %}
+						{% csrf_token %} <!-- added to remove the csrf verification issue -->
 						<p>Sign in to continue</p>
 						<div class="lowin-group">
 							<label>Email <a href="#" class="login-back-link">Sign in?</a></label>
@@ -109,7 +110,7 @@
 	<script src="{% static 'auth.js' %}"></script>
 	<script>
 		Auth.init({
-			login_url: 'login_check',
+			login_url: 'login_check', // login_check calls the function in views.py to verify logged in user,cookies and session
 			forgot_url: '#forgot'
 		});
 	</script>

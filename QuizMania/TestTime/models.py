@@ -1,5 +1,5 @@
 from django.db import models
-from login_register.models import userInfo
+#from login_register.models import userInfo
 # Create your models here.
 
 
@@ -15,7 +15,7 @@ class testInfo(models.Model):
     
 class userScore(models.Model):
     score = models.IntegerField(null=False)
-    user_id = models.ForeignKey(userInfo,on_delete=models.CASCADE,related_name="UserId")
+   # user_id = models.ForeignKey(userInfo,on_delete=models.CASCADE,related_name="UserId")
     test_id = models.ForeignKey(testInfo,on_delete=models.CASCADE,related_name="TestId")
 
     def __str__(self):
